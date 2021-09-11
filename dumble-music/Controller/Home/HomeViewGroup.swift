@@ -45,12 +45,12 @@ class HomeViewGroup: UICollectionViewController{
 extension HomeViewGroup: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: 180, height: view.frame.height - 20)
+        return .init(width: view.frame.width * 0.41, height: view.frame.height - 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 0, left: 12, bottom: 0, right: 12)
     }
-    
+     
 }
 
