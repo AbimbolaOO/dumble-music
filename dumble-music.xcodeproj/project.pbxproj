@@ -13,6 +13,14 @@
 		5F03439E26EC126A00AE2BFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F03439C26EC126A00AE2BFB /* Main.storyboard */; };
 		5F0343A026EC126D00AE2BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F03439F26EC126D00AE2BFB /* Assets.xcassets */; };
 		5F0343A326EC126D00AE2BFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0343A126EC126D00AE2BFB /* LaunchScreen.storyboard */; };
+		5F0343AB26EC1C5F00AE2BFB /* BaseTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343AA26EC1C5F00AE2BFB /* BaseTabViewController.swift */; };
+		5F0343AE26EC261C00AE2BFB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343AD26EC261C00AE2BFB /* HomeViewController.swift */; };
+		5F0343B226EC311200AE2BFB /* HomeViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343B126EC311200AE2BFB /* HomeViewControllerCell.swift */; };
+		5F0343B426EC38D000AE2BFB /* HomeViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343B326EC38D000AE2BFB /* HomeViewGroup.swift */; };
+		5F0343B626EC446E00AE2BFB /* HomeViewGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343B526EC446E00AE2BFB /* HomeViewGroupCell.swift */; };
+		5F0343B826EC595D00AE2BFB /* HomeHeaderReuseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343B726EC595D00AE2BFB /* HomeHeaderReuseView.swift */; };
+		5F0343BC26EC5EB000AE2BFB /* HomeHeaderReuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343BB26EC5EAF00AE2BFB /* HomeHeaderReuseViewController.swift */; };
+		5F0343BE26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343BD26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		5F03439F26EC126D00AE2BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F0343A226EC126D00AE2BFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F0343A426EC126D00AE2BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F0343AA26EC1C5F00AE2BFB /* BaseTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabViewController.swift; sourceTree = "<group>"; };
+		5F0343AD26EC261C00AE2BFB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5F0343B126EC311200AE2BFB /* HomeViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerCell.swift; sourceTree = "<group>"; };
+		5F0343B326EC38D000AE2BFB /* HomeViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewGroup.swift; sourceTree = "<group>"; };
+		5F0343B526EC446E00AE2BFB /* HomeViewGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewGroupCell.swift; sourceTree = "<group>"; };
+		5F0343B726EC595D00AE2BFB /* HomeHeaderReuseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReuseView.swift; sourceTree = "<group>"; };
+		5F0343BB26EC5EAF00AE2BFB /* HomeHeaderReuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReuseViewController.swift; sourceTree = "<group>"; };
+		5F0343BD26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReuseViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,8 @@
 		5F03439526EC126A00AE2BFB /* dumble-music */ = {
 			isa = PBXGroup;
 			children = (
+				5F0343B026EC30A700AE2BFB /* View */,
+				5F0343AC26EC25DD00AE2BFB /* Controller */,
 				5F03439626EC126A00AE2BFB /* AppDelegate.swift */,
 				5F03439826EC126A00AE2BFB /* SceneDelegate.swift */,
 				5F03439A26EC126A00AE2BFB /* ViewController.swift */,
@@ -65,6 +83,44 @@
 				5F0343A426EC126D00AE2BFB /* Info.plist */,
 			);
 			path = "dumble-music";
+			sourceTree = "<group>";
+		};
+		5F0343AC26EC25DD00AE2BFB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F0343AF26EC309900AE2BFB /* Home */,
+				5F0343AA26EC1C5F00AE2BFB /* BaseTabViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F0343AF26EC309900AE2BFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5F0343AD26EC261C00AE2BFB /* HomeViewController.swift */,
+				5F0343B326EC38D000AE2BFB /* HomeViewGroup.swift */,
+				5F0343BB26EC5EAF00AE2BFB /* HomeHeaderReuseViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5F0343B026EC30A700AE2BFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F0343BA26EC5DF800AE2BFB /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F0343BA26EC5DF800AE2BFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5F0343B126EC311200AE2BFB /* HomeViewControllerCell.swift */,
+				5F0343B526EC446E00AE2BFB /* HomeViewGroupCell.swift */,
+				5F0343B726EC595D00AE2BFB /* HomeHeaderReuseView.swift */,
+				5F0343BD26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +193,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F0343AE26EC261C00AE2BFB /* HomeViewController.swift in Sources */,
+				5F0343B826EC595D00AE2BFB /* HomeHeaderReuseView.swift in Sources */,
+				5F0343AB26EC1C5F00AE2BFB /* BaseTabViewController.swift in Sources */,
 				5F03439B26EC126A00AE2BFB /* ViewController.swift in Sources */,
+				5F0343B626EC446E00AE2BFB /* HomeViewGroupCell.swift in Sources */,
+				5F0343BE26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift in Sources */,
+				5F0343BC26EC5EB000AE2BFB /* HomeHeaderReuseViewController.swift in Sources */,
 				5F03439726EC126A00AE2BFB /* AppDelegate.swift in Sources */,
 				5F03439926EC126A00AE2BFB /* SceneDelegate.swift in Sources */,
+				5F0343B226EC311200AE2BFB /* HomeViewControllerCell.swift in Sources */,
+				5F0343B426EC38D000AE2BFB /* HomeViewGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
