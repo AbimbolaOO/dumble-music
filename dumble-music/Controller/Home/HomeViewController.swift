@@ -48,11 +48,11 @@ class HomeViewController: UICollectionViewController{
 extension HomeViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width, height: view.frame.height*0.30)
+        return .init(width: view.frame.width, height: 300)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: view.frame.height*0.55)
+        return .init(width: view.frame.width, height: 500)
     }
     
 }

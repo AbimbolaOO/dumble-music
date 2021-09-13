@@ -21,6 +21,8 @@
 		5F0343B826EC595D00AE2BFB /* HomeHeaderReuseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343B726EC595D00AE2BFB /* HomeHeaderReuseView.swift */; };
 		5F0343BC26EC5EB000AE2BFB /* HomeHeaderReuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343BB26EC5EAF00AE2BFB /* HomeHeaderReuseViewController.swift */; };
 		5F0343BE26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343BD26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift */; };
+		5F0343CB26EE902700AE2BFB /* DMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343CA26EE902700AE2BFB /* DMClient.swift */; };
+		5F0343CE26EEB22600AE2BFB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0343CD26EEB22600AE2BFB /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		5F0343B726EC595D00AE2BFB /* HomeHeaderReuseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReuseView.swift; sourceTree = "<group>"; };
 		5F0343BB26EC5EAF00AE2BFB /* HomeHeaderReuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReuseViewController.swift; sourceTree = "<group>"; };
 		5F0343BD26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderReuseViewCell.swift; sourceTree = "<group>"; };
+		5F0343CA26EE902700AE2BFB /* DMClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMClient.swift; sourceTree = "<group>"; };
+		5F0343CD26EEB22600AE2BFB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 		5F03439526EC126A00AE2BFB /* dumble-music */ = {
 			isa = PBXGroup;
 			children = (
+				5F0343C926EE8FDA00AE2BFB /* Model */,
 				5F0343B026EC30A700AE2BFB /* View */,
 				5F0343AC26EC25DD00AE2BFB /* Controller */,
 				5F03439626EC126A00AE2BFB /* AppDelegate.swift */,
@@ -88,6 +93,7 @@
 		5F0343AC26EC25DD00AE2BFB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5F0343CC26EE970200AE2BFB /* Search */,
 				5F0343AF26EC309900AE2BFB /* Home */,
 				5F0343AA26EC1C5F00AE2BFB /* BaseTabViewController.swift */,
 			);
@@ -121,6 +127,22 @@
 				5F0343BD26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5F0343C926EE8FDA00AE2BFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5F0343CA26EE902700AE2BFB /* DMClient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F0343CC26EE970200AE2BFB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5F0343CD26EEB22600AE2BFB /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +216,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F0343AE26EC261C00AE2BFB /* HomeViewController.swift in Sources */,
+				5F0343CB26EE902700AE2BFB /* DMClient.swift in Sources */,
 				5F0343B826EC595D00AE2BFB /* HomeHeaderReuseView.swift in Sources */,
 				5F0343AB26EC1C5F00AE2BFB /* BaseTabViewController.swift in Sources */,
 				5F03439B26EC126A00AE2BFB /* ViewController.swift in Sources */,
 				5F0343B626EC446E00AE2BFB /* HomeViewGroupCell.swift in Sources */,
 				5F0343BE26EC66E200AE2BFB /* HomeHeaderReuseViewCell.swift in Sources */,
 				5F0343BC26EC5EB000AE2BFB /* HomeHeaderReuseViewController.swift in Sources */,
+				5F0343CE26EEB22600AE2BFB /* SearchViewController.swift in Sources */,
 				5F03439726EC126A00AE2BFB /* AppDelegate.swift in Sources */,
 				5F03439926EC126A00AE2BFB /* SceneDelegate.swift in Sources */,
 				5F0343B226EC311200AE2BFB /* HomeViewControllerCell.swift in Sources */,

@@ -8,21 +8,29 @@
 import UIKit
 
 class HomeHeaderReuseView: UICollectionReusableView{
+    
+    let trending: UILabel = {
+        let label = UILabel()
+        label.text = "Trending"
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.textColor = .white
+        return label
+    }()
+    
+    let trendingMusicList = HomeHeaderReuseViewController()
+    
     override init(frame: CGRect){
         super.init(frame: frame)
         backgroundColor = .blue
-        let trending = UILabel()
-        trending.text = "Trending"
-        trending.font = UIFont.boldSystemFont(ofSize: 24)
-        trending.textColor = .white
+        
         addSubview(trending)
+        addSubview(trendingMusicList.view)
+        
         trending.translatesAutoresizingMaskIntoConstraints = false
         trending.topAnchor.constraint(equalTo: topAnchor , constant: 24).isActive = true
         trending.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
         trending.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive = true
         
-        let trendingMusicList = HomeHeaderReuseViewController()
-        addSubview(trendingMusicList.view)
         trendingMusicList.view.translatesAutoresizingMaskIntoConstraints = false
         trendingMusicList.view.topAnchor.constraint(equalTo: trending.bottomAnchor, constant: 12).isActive = true
         trendingMusicList.view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
