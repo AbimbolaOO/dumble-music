@@ -11,10 +11,13 @@ class BaseTabViewController: UITabBarController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = [createView(viewController: HomeViewController(), title: "Home", imageName: "search"),
-                           createView(viewController: UIViewController(), title: "Search", imageName: "search"),
-                           createView(viewController: UIViewController(), title: "PlayList", imageName: "search"),
-                           createView(viewController: UIViewController(), title: "Downloads", imageName: "search")]
+        viewControllers = [
+//            createView(viewController: UIViewController(), title: "PlayList", imageName: "search"),
+            createView(viewController: HomeViewController(), title: "Home", imageName: "search"),
+            createView(viewController: SearchViewController(), title: "Search", imageName: "search"),
+            createView(viewController: PlaylistViewController(), title: "Playlist", imageName: "search"),
+            createView(viewController: UIViewController(), title: "Downloads", imageName: "search")
+        ]
         tabBar.tintColor = .white
         tabBar.barTintColor = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 1)
     }
