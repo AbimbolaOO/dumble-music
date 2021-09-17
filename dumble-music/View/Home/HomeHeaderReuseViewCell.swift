@@ -9,35 +9,48 @@ import UIKit
 
 class HomeHeaderReuseViewCell: UICollectionViewCell {
     
+    let songDiscription: UILabel = {
+        let label = UILabel()
+        label.text = "Austin Millz - Ride (stripness flip)"
+        label.font = UIFont.boldSystemFont(ofSize: 24)
+        label.textColor = .white
+        return label
+    }()
+    
+    let recordLabel: UILabel = {
+        let label = UILabel()
+        label.text = "stripness"
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        return label
+    }()
+    
+    let songCoverImage: UIImageView = {
+        let image = UIImageView()
+        image.backgroundColor = .purple
+        image.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        image.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        image.image = UIImage(named: "dog")
+        image.clipsToBounds = true
+        image.contentMode = .scaleAspectFill
+        return image
+    }()
+    
+    let itemNumber: UILabel = {
+        let label = UILabel()
+        label.text = "1"
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        return label
+    }()
+    
     override init(frame:CGRect){
         super.init(frame: frame)
-        backgroundColor = .systemOrange
-        
-        let songDiscription = UILabel()
-        songDiscription.text = "Austin Millz - Ride (stripness flip)"
-        songDiscription.font = UIFont.boldSystemFont(ofSize: 24)
-        songDiscription.textColor = .white
-        
-        let recordLabel = UILabel()
-        recordLabel.text = "stripness"
-        recordLabel.font = UIFont.systemFont(ofSize: 16)
-        recordLabel.textColor = .white
+//        backgroundColor = .systemOrange
         
         let discriptionStack = UIStackView(arrangedSubviews: [songDiscription, recordLabel])
         discriptionStack.axis = .vertical
         addSubview(discriptionStack)
-        
-        let songCoverImage = UIImageView()
-        songCoverImage.backgroundColor = .purple
-        songCoverImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        songCoverImage.image = UIImage(named: "dog")
-        songCoverImage.clipsToBounds = true
-        songCoverImage.contentMode = .scaleAspectFill
-        
-        let itemNumber = UILabel()
-        itemNumber.text = "1"
-        itemNumber.font = UIFont.systemFont(ofSize: 16)
-        itemNumber.textColor = .white
         
         let superHorizontalStack = UIStackView(arrangedSubviews: [songCoverImage, itemNumber, discriptionStack])
         addSubview(superHorizontalStack)
@@ -47,9 +60,10 @@ class HomeHeaderReuseViewCell: UICollectionViewCell {
         superHorizontalStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         superHorizontalStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
         
-        superHorizontalStack.distribution = .equalSpacing
+//        superHorizontalStack.distribution = .equalSpacing
+        superHorizontalStack.spacing = 20
         superHorizontalStack.alignment = .center
-
+        
     }
     
     required init?(coder: NSCoder) {

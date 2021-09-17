@@ -20,9 +20,10 @@ class HomeHeaderReuseViewController: UICollectionViewController{
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        collectionView.backgroundColor = .green
+//        collectionView.backgroundColor = .green
         collectionView.register(HomeHeaderReuseViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.showsHorizontalScrollIndicator = false
+//        collectionView.decelerationRate = .fast
         
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
             layout.scrollDirection = .horizontal
@@ -38,22 +39,24 @@ class HomeHeaderReuseViewController: UICollectionViewController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         return cell
     }
+    
+    
+    
 }
 
 extension HomeHeaderReuseViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellheight = (view.frame.height - 40)/4
-        return .init(width: view.frame.width - 50, height: cellheight)
+        return .init(width: view.frame.width - 30, height: 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 0, left: 12, bottom: 0, right: 12)
+        return .init(top: 0, left: 12, bottom: 42, right: 12)
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return 8
     }
 }
 
