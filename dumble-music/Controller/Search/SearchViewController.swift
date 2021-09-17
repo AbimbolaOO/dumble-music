@@ -12,7 +12,16 @@ class SearchViewController: UIViewController{
     let tableCellId = String(describing: SearchTableViewCell.self)
 //    let tableHeaderId =
     
-    let searchbar = UISearchBar()
+    let searchbar: UISearchBar = {
+        let searchbar = UISearchBar()
+        searchbar.placeholder = "Search"
+        searchbar.barTintColor = #colorLiteral(red: 0.09631500393, green: 0.09575008601, blue: 0.09675414115, alpha: 1)
+        searchbar.tintColor = .red
+        searchbar.searchTextField.textColor = .white
+        searchbar.searchTextField.leftView?.tintColor = .white
+        return searchbar
+    }()
+    
     let tableView = UITableView()
     
     override func viewDidLoad(){
@@ -20,8 +29,7 @@ class SearchViewController: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
-        
-        view.backgroundColor = .black
+        tableView.backgroundColor = .black
         
         navigationController?.isNavigationBarHidden = true
         tableView.register(UINib(nibName: tableCellId, bundle: nil), forCellReuseIdentifier: tableCellId)
@@ -29,6 +37,7 @@ class SearchViewController: UIViewController{
         
         let stackView = UIStackView(arrangedSubviews: [searchbar, tableView])
         stackView.axis = .vertical
+        stackView.spacing = 6
                 
         view.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +45,7 @@ class SearchViewController: UIViewController{
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        stackView.backgroundColor = .black
+//        stackView.backgroundColor = .black
 
     }
     
@@ -51,10 +60,13 @@ extension SearchViewController: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: tableCellId, for:indexPath) as? SearchTableViewCell else{
             fatalError("Omo nah wetin you dey write")
         }
-        let accessoryImage = UIImage(named: "search")
+        
+        let accessoryImage = UIImage(systemName: "ellipsis")
         let accessoryView = UIImageView(image: accessoryImage)
+        accessoryView.tintColor = .white
+        
         cell.accessoryView = accessoryView
-        cell.accessoryView = accessoryView
+        cell.backgroundColor = .black
         return cell
     }
     
