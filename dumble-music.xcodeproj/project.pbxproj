@@ -31,6 +31,7 @@
 		5F32CDF326F3C27000176F24 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32CDF226F3C27000176F24 /* DownloadViewController.swift */; };
 		5F32CDF726F4941500176F24 /* DownloadsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32CDF526F4941500176F24 /* DownloadsTableViewCell.swift */; };
 		5F32CDF826F4941500176F24 /* DownloadsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F32CDF626F4941500176F24 /* DownloadsTableViewCell.xib */; };
+		5F32CDFA26F534FC00176F24 /* PlaylistTableViewSearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32CDF926F534FC00176F24 /* PlaylistTableViewSearchBarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		5F32CDF226F3C27000176F24 /* DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadViewController.swift; sourceTree = "<group>"; };
 		5F32CDF526F4941500176F24 /* DownloadsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsTableViewCell.swift; sourceTree = "<group>"; };
 		5F32CDF626F4941500176F24 /* DownloadsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadsTableViewCell.xib; sourceTree = "<group>"; };
+		5F32CDF926F534FC00176F24 /* PlaylistTableViewSearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewSearchBarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		5F32CDEA26F3AAEF00176F24 /* Playlist */ = {
 			isa = PBXGroup;
 			children = (
+				5F32CDF926F534FC00176F24 /* PlaylistTableViewSearchBarCell.swift */,
 				5F32CDED26F3AD4800176F24 /* PlaylistTableViewCell.swift */,
 				5F32CDEE26F3AD4800176F24 /* PlaylistTableViewCell.xib */,
 			);
@@ -284,6 +287,7 @@
 			files = (
 				5F0343AE26EC261C00AE2BFB /* HomeViewController.swift in Sources */,
 				5F32CDF726F4941500176F24 /* DownloadsTableViewCell.swift in Sources */,
+				5F32CDFA26F534FC00176F24 /* PlaylistTableViewSearchBarCell.swift in Sources */,
 				5F0343CB26EE902700AE2BFB /* DMClient.swift in Sources */,
 				5F32CDF326F3C27000176F24 /* DownloadViewController.swift in Sources */,
 				5F0343B826EC595D00AE2BFB /* HomeHeaderReuseView.swift in Sources */,
