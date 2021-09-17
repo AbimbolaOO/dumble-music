@@ -21,7 +21,7 @@ class PlaylistViewController: UIViewController{
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: tableCellId, bundle: nil), forCellReuseIdentifier: tableCellId)
-
+//        tableView.register(, forHeaderFooterViewReuseIdentifier: <#T##String#>)
         
         let stackView = UIStackView(arrangedSubviews: [searchbar, tableView])
         stackView.axis = .vertical
