@@ -11,20 +11,33 @@ class HomeViewController: UICollectionViewController{
     
     let cellId = String(describing: HomeViewControllerCell.self)
     let collectionViewHeaderID = "headerId"
+    let collectionViewFooterID = "footerId"
     
-    init(){
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
+    let recentBarButtonItem:UIBarButtonItem = {
+        let button = UIBarButtonItem()
+        button.tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        button.image = UIImage(systemName: "gearshape.fill")
+        return button
+    }()
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    let settingsBarButtonItem:UIBarButtonItem = {
+        let button = UIBarButtonItem()
+        button.tintColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        button.image = UIImage(systemName: "clock.arrow.circlepath")
+        return button
+    }()
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        collectionView.backgroundColor = .green
+        collectionView.backgroundColor = .black
+        navigationItem.rightBarButtonItems = [recentBarButtonItem, settingsBarButtonItem]
+        
         collectionView.register(HomeHeaderReuseView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: collectionViewHeaderID)
+        
         collectionView.register(HomeViewControllerCell.self, forCellWithReuseIdentifier: cellId)
+        
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: collectionViewFooterID)
+        
     }
     
     //MARK:- CollectionView
@@ -38,8 +51,27 @@ class HomeViewController: UICollectionViewController{
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: collectionViewHeaderID, for: indexPath)
-        return header
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: collectionViewHeaderID, for: indexPath)
+            return header
+        case UICollectionView.elementKindSectionFooter:
+            let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: collectionViewFooterID, for: indexPath)
+            return footer
+        default:
+            fatalError("Couldn't create the view")
+        }
+        
+    }
+    
+    //MARK:- Initializers
+    
+    init(){
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
@@ -52,7 +84,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return .init(width: view.frame.width, height: 500)
+        return .init(width: view.frame.width, height: 452)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
     }
     
 }

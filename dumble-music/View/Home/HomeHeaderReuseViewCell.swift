@@ -20,15 +20,16 @@ class HomeHeaderReuseViewCell: UICollectionViewCell {
     let recordLabel: UILabel = {
         let label = UILabel()
         label.text = "stripness"
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         return label
     }()
     
     let songCoverImage: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .purple
-        image.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        image.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        image.heightAnchor.constraint(equalToConstant: 80).isActive = true
         image.image = UIImage(named: "dog")
         image.clipsToBounds = true
         image.contentMode = .scaleAspectFill
@@ -38,14 +39,14 @@ class HomeHeaderReuseViewCell: UICollectionViewCell {
     let itemNumber: UILabel = {
         let label = UILabel()
         label.text = "1"
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         return label
     }()
     
     override init(frame:CGRect){
         super.init(frame: frame)
-        backgroundColor = .systemOrange
+//        backgroundColor = .systemOrange
         
         let discriptionStack = UIStackView(arrangedSubviews: [songDiscription, recordLabel])
         discriptionStack.axis = .vertical
@@ -59,7 +60,8 @@ class HomeHeaderReuseViewCell: UICollectionViewCell {
         superHorizontalStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
         superHorizontalStack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
         
-        superHorizontalStack.distribution = .equalSpacing
+//        superHorizontalStack.distribution = .equalSpacing
+        superHorizontalStack.spacing = 20
         superHorizontalStack.alignment = .center
         
     }

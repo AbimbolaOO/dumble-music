@@ -21,7 +21,7 @@ class HomeViewGroup: UICollectionViewController{
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        collectionView.backgroundColor = .yellow
+//        collectionView.backgroundColor = .yellow
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(HomeViewGroupCell.self, forCellWithReuseIdentifier: cellId)
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
@@ -45,11 +45,15 @@ class HomeViewGroup: UICollectionViewController{
 extension HomeViewGroup: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.frame.width * 0.41, height: view.frame.height - 20)
+        return .init(width: 170, height: view.frame.height - 20)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return .init(top: 0, left: 12, bottom: 0, right: 12)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        20
     }
      
 }
